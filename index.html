@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Avenworth | Bookkeeping catch-up, cleanup &amp; bank reconciliation</title>
+    <meta name="description" content="Avenworth: remote bookkeeping catch-up, cleanup and bank reconciliation for Australian small businesses using Xero or QuickBooks Online. Thornlands QLD.">
+    <style>
+        body {
+            font-family: 'Times New Roman', serif;
+            background-color: #f5f3eb;
+            margin: 0;
+            padding: 0;
+            color: #183c34;
+            line-height: 1.6;
+        }
+        header {
+            background-color: #183c34;
+            color: #f5f3eb;
+            padding: 1rem 0;
+            text-align: center;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+        }
+        nav a {
+            color: #f5f3eb;
+            text-decoration: none;
+            margin: 0 1rem;
+        }
+        button {
+            background-color: #de663e;
+            color: #f5f3eb;
+            border: none;
+            padding: 0.5rem 1rem;
+            cursor: pointer;
+        }
+        .hero {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 2rem;
+            background-color: #f5f3eb;
+        }
+        .hero-eyebrow {
+            font-size: 1.2rem;
+            font-weight: bold;
+        }
+        .hero-headline {
+            font-size: 2.5rem;
+            font-weight: bold;
+        }
+        .hero-text {
+            max-width: 50%;
+        }
+        .hero-card {
+            background-color: #fff;
+            padding: 1rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .hero-card h3 {
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+        }
+        .hero-card p {
+            margin: 0;
+        }
+        .services {
+            padding: 2rem;
+        }
+        .services h2 {
+            font-size: 2rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+        }
+        .services-card {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 1rem;
+        }
+        .services-card h3 {
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+        }
+        .services-card p {
+            margin: 0;
+        }
+        .approach {
+            background-color: #183c34;
+            color: #f5f3eb;
+            padding: 2rem;
+            display: flex;
+            flex-direction: column;
+        }
+        .approach h2 {
+            font-size: 2rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+        }
+        .approach-step {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1rem;
+        }
+        .approach-step h3 {
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+        }
+        .approach-step p {
+            margin: 0;
+        }
+        .faq {
+            padding: 2rem;
+        }
+        .faq h2 {
+            font-size: 2rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+        }
+        .faq-details {
+            margin-bottom: 1rem;
+        }
+        .faq-details h3 {
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+        }
+        .faq-details p {
+            margin: 0;
+        }
+        .contact {
+            padding: 2rem;
+            background-color: #f5f3eb;
+        }
+        .contact h2 {
+            font-size: 2rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+        }
+        .contact-text {
+            max-width: 50%;
+        }
+        .status {
+            background-color: #de663e;
+            color: #f5f3eb;
+            padding: 0.5rem;
+            border-radius: 8px;
+            margin-top: 1rem;
+        }
+        footer {
+            background-color: #183c34;
+            color: #f5f3eb;
+            padding: 1rem 0;
+            text-align: center;
+        }
+        footer p {
+            margin: 0;
+        }
+        @media (max-width: 768px) {
+            .hero {
+                flex-direction: column;
+            }
+            .hero-card {
+                margin-bottom: 1rem;
+            }
+            .services-card {
+                flex-direction: column;
+                margin-bottom: 1rem;
+            }
+            .approach-step {
+                flex-direction: column;
+                margin-bottom: 1rem;
+            }
+            .contact-text {
+                max-width: 100%;
+            }
+        }
+        /* Reviewed layout corrections: readable type, responsive grids and real link states. */
+        * { box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        body { font-family: Arial, Helvetica, sans-serif; }
+        a { color: inherit; }
+        a:focus-visible, summary:focus-visible { outline: 3px solid #b94822; outline-offset: 6px; }
+        .preview-note { text-align:center; padding:9px 18px; background:#e8e5da; font-size:10px; letter-spacing:1.8px; }
+        header { background:transparent; color:#183c34; display:flex; align-items:center; justify-content:space-between; padding:28px 6vw; border-bottom:1px solid #cfd3c8; }
+        .wordmark { font:25px Georgia,serif; letter-spacing:3px; text-decoration:none; text-align:left; }
+        .wordmark span { display:block; font:9px Arial,sans-serif; letter-spacing:4px; margin-top:3px; }
+        nav a { color:#183c34; font-size:13px; }
+        nav a:hover { text-decoration:underline; text-underline-offset:6px; }
+        .button { display:inline-block; background:#183c34; color:#fff; border-radius:3px; padding:14px 22px; text-decoration:none; font-size:13px; font-weight:bold; }
+        .button:hover { background:#28574b; }
+        .hero { display:grid; grid-template-columns:minmax(0,1.45fr) minmax(0,1fr); gap:7vw; padding:95px 8vw 100px; }
+        .hero-eyebrow { font-size:10px; letter-spacing:2px; margin-bottom:25px; }
+        .hero-headline { font:clamp(46px,4.9vw,77px)/1.05 Georgia,serif; letter-spacing:-2px; margin:0 0 25px; }
+        .hero-headline em { font-weight:normal; color:#596f55; }
+        .hero-text { max-width:440px; }
+        .hero-text > p:first-child { font-size:16px; color:#52635a; margin-bottom:25px; }
+        .hero-note { font-size:10px; margin-top:23px; letter-spacing:.2px; }
+        .hero-card { padding:35px; margin:0 10px; position:relative; z-index:0; border-radius:2px; border:1px solid #d8ddd1; box-shadow:12px 20px 40px #183c3412; transform:rotate(2deg); background:#fffef7; }
+        .hero-card:before { content:''; position:absolute; z-index:-1; inset:15px -18px -16px 14px; border:1px solid #b2beb0; transform:rotate(-7deg); background:#e4e8d8; }
+        .hero-card:after { content:''; position:absolute; z-index:-1; inset:0; background:#fffef7; }
+        .card-mark { font:62px Georgia,serif; color:#bb512c; margin-bottom:38px; }
+        .hero-card h2 { font-size:11px; letter-spacing:2px; margin:0; }
+        .hero-card small { font-size:10px; color:#59685e; display:block; margin:6px 0 24px; }
+        .hero-card p { padding:12px 0; border-top:1px solid #d8ddd1; font-size:13px; }
+        .hero-card p:before { content:'✓'; margin-right:14px; color:#3b6451; }
+        .services { padding:65px 8vw 85px; display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:34px; border-top:1px solid #cfd3c8; counter-reset:services; }
+        .services h2 { grid-column:1/-1; font:40px/1.15 Georgia,serif; max-width:510px; margin:0 0 15px; }
+        .services-card { display:block; padding:25px 0 0; border-top:1px solid #aab6a6; }
+        .services-card:before { counter-increment:services; content:'0' counter(services); font-size:11px; color:#a44020; }
+        .services-card h3 { font:25px Georgia,serif; margin:21px 0 16px; }
+        .services-card p { font-size:14px; color:#52635a; }
+        .approach { display:grid; grid-template-columns:1fr 1fr; column-gap:9vw; padding:80px 8vw; }
+        .approach h2 { font:42px/1.16 Georgia,serif; grid-row:1/4; margin:0; max-width:400px; }
+        .approach-step { display:block; padding:0 0 25px; border-bottom:1px solid #4d695d; margin-bottom:24px; }
+        .approach-step h3 { font:19px Georgia,serif; margin:0 0 12px; }
+        .approach-step p { font-size:13px; color:#d8e0d7; }
+        .faq { padding:70px 8vw; max-width:1000px; margin:auto; }
+        .faq h2 { font:36px Georgia,serif; }
+        details { padding:20px 0; border-bottom:1px solid #cfd3c8; font-size:14px; }
+        summary { cursor:pointer; font-weight:bold; }
+        details p { color:#52635a; margin:18px 0 0; }
+        .contact { text-align:center; padding:70px 8vw 85px; background:#e4e8d8; }
+        .contact h2 { font:clamp(36px,4vw,54px)/1.15 Georgia,serif; margin:0 0 20px; }
+        .contact p { font-size:14px; max-width:490px; margin:0 auto 24px; }
+        .status { display:inline-block; background:transparent; border:1px solid #a4b09a; color:#183c34; font-size:12px; border-radius:2px; padding:12px 20px; }
+        footer { padding:25px; font-size:10px; letter-spacing:.4px; }
+        @media(max-width:760px) {
+          header { padding:22px 6vw; flex-wrap:wrap; gap:22px; }
+          .wordmark { font-size:21px; } nav { order:3; width:100%; justify-content:flex-start; gap:25px; } nav a { margin:0; }
+          header .button { padding:10px 13px; font-size:11px; }
+          .hero { grid-template-columns:1fr; padding:50px 7vw 65px; gap:50px; }
+          .hero-headline { letter-spacing:-1.5px; font-size:48px; } .hero-text { max-width:100%; }
+          .hero-card { width:calc(100% - 30px); max-width:380px; margin:0 auto; transform:none; }
+          .hero-card:before { inset:10px -6px -10px 6px; transform:rotate(-3deg); }
+          .services { grid-template-columns:1fr; padding:50px 7vw; gap:15px; }
+          .services h2 { font-size:35px; }.services-card { padding:20px 0; }
+          .approach { grid-template-columns:1fr; padding:50px 7vw; gap:20px; }
+          .approach h2 { grid-row:auto; font-size:36px; margin-bottom:18px; }
+          .faq { padding:40px 7vw; }.contact { padding:50px 7vw; }
+        }
+        @media(prefers-reduced-motion:reduce) { html { scroll-behavior:auto; } }
+    </style>
+</head>
+<body>
+    <header>
+        <a class="wordmark" href="#main">AVENWORTH<span>BOOKKEEPING</span></a>
+        <nav>
+            <a href="#services">Services</a>
+            <a href="#approach">Our approach</a>
+        </nav>
+        <a class="button" href="#contact">Let's talk <span aria-hidden="true">&#8599;</span></a>
+    </header>
+    <main id="main"><section class="hero"><div class="hero-copy">
+        <div class="hero-eyebrow">BOOKKEEPING FOR BUSINESS OWNERS</div>
+        <h1 class="hero-headline">A clearer picture.<br><em>A calmer business.</em></h1>
+        <div class="hero-text">
+            <p>Keep your records organised, understand what needs attention, and get back to the work you do best.</p>
+            <a href="#services" class="button">Explore our services</a>
+            <p class="hero-note">Clear scope. Consistent routines. Human support.</p>
+        </div>
+        </div><div class="hero-card">
+            <div class="card-mark" aria-hidden="true">A.</div><h2>THE MONTHLY PICTURE</h2><small>Xero &middot; QuickBooks Online</small>
+            <p>Bank accounts reconciled</p>
+            <p>Open items listed and explained</p>
+            <p>Books ready for your agent</p>
+        </div>
+    </section>
+    <section class="services" id="services">
+        <h2>Good books start with a good system.</h2>
+        <div class="services-card">
+            <h3>Catch-up</h3>
+            <p>Months behind? We bring your transactions up to date, at a fixed price agreed before we start.</p>
+        </div>
+        <div class="services-card">
+            <h3>Cleanup</h3>
+            <p>Duplicates, miscoded items and messy accounts sorted, with a list of anything that needs your answer.</p>
+        </div>
+        <div class="services-card">
+            <h3>Bank reconciliation</h3>
+            <p>Your Xero or QuickBooks Online matched to your bank statements, and a plain-English summary of what we found.</p>
+        </div>
+    </section>
+    <section class="approach" id="approach">
+        <h2>You should never have to wonder where things stand.</h2>
+        <div class="approach-step">
+            <h3>01 Agree the scope</h3>
+            <p>We understand the records, agree the work and confirm the fee before starting.</p>
+        </div>
+        <div class="approach-step">
+            <h3>02 Build the rhythm</h3>
+            <p>A consistent schedule for documents, processing and questions.</p>
+        </div>
+        <div class="approach-step">
+            <h3>03 Close the loop</h3>
+            <p>A clear summary of the work completed and anything still waiting on you.</p>
+        </div>
+    </section>
+    <section class="faq">
+        <h2>FAQ</h2>
+        <details>
+            <summary>Who do you work with?</summary>
+            <p>Sole traders and small owner-operated businesses &mdash; trades, services and hospitality &mdash; using Xero or QuickBooks Online. We work fully remotely, Australia-wide, from Thornlands QLD.</p>
+        </details>
+        <details>
+            <summary>Can you help with BAS or tax?</summary>
+            <p>We do bookkeeping, not tax. GST, BAS and tax decisions and lodgements stay with your registered tax or BAS agent, and we work alongside them. We are not a registered tax or BAS agent.</p>
+        </details>
+        <details>
+            <summary>How are fees agreed?</summary>
+            <p>After a quick look at the volume and condition of your records. You get a fixed price and a written scope before any work starts, and nothing extra happens without your approval.</p>
+        </details>
+    </section>
+    <section class="contact" id="contact">
+        <h2>Start with a conversation.</h2>
+        <p>Tell us what your business does, the software you use and where your records are up to.</p>
+        <p><a class="button" href="mailto:hello@avenworth.com.au?subject=Bookkeeping%20enquiry">hello@avenworth.com.au</a></p>
+        <p>or call Theo on <a href="tel:+61425845110">0425 845 110</a></p>
+    </section>
+    </main><footer>
+        <p>Avenworth &middot; Theodore Trottemant, sole trader &middot; ABN 28 127 762 417 &middot; Thornlands QLD 4164<br>Bookkeeping services only. Not a registered tax or BAS agent. We use details you send us only to reply to you.</p>
+    </footer>
+</body>
+</html>
