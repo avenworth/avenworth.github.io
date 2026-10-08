@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://avenworth.com.au/sitemap.xml
