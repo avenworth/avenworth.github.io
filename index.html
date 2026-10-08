@@ -36,7 +36,8 @@
   "description": "Fixed-price Xero bookkeeping catch-up and bank reconciliation for Australian small businesses. Bookkeeping only; not a registered tax or BAS agent.",
   "makesOffer": [
     {"@type": "Offer", "name": "The Catch-Up", "price": "650", "priceCurrency": "AUD"},
-    {"@type": "Offer", "name": "Keep-Up", "priceSpecification": {"@type": "UnitPriceSpecification", "price": "350", "priceCurrency": "AUD", "unitText": "month"}}
+    {"@type": "Offer", "name": "Keep-Up Starter (up to 50 transactions a month)", "priceSpecification": {"@type": "UnitPriceSpecification", "price": "250", "priceCurrency": "AUD", "unitText": "month"}},
+    {"@type": "Offer", "name": "Keep-Up Standard (up to 100 transactions a month)", "priceSpecification": {"@type": "UnitPriceSpecification", "price": "300", "priceCurrency": "AUD", "unitText": "month"}}
   ]
 }
 </script>
@@ -163,6 +164,14 @@ p{margin:0}
 .amount strong{font:600 64px/1 var(--display);color:var(--navy);letter-spacing:-.02em;font-variant-numeric:tabular-nums}
 .amount span{color:var(--soft);font-size:17px}
 .plan .small{font-size:14.5px;color:var(--soft)}
+.amount .from{order:-1;font-size:17px;color:var(--soft)}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.tiers{width:100%;border-collapse:collapse;margin:22px 0 4px;font-variant-numeric:tabular-nums}
+.tiers th,.tiers td{text-align:left;padding:11px 0;border-top:1px solid var(--line);font-size:16px;font-weight:400}
+.tiers thead th{border-top:0;font-size:13px;font-weight:600;color:var(--soft);padding-top:0}
+.tiers tbody th{font-weight:600}
+.tiers td:last-child,.tiers th:last-child{text-align:right}
+.tiers td:last-child{font-weight:700;color:var(--navy)}
 .plan .note{font-size:15px;color:var(--soft);background:var(--mist);border-radius:12px;padding:14px 16px;margin:-6px 0 26px}
 .need{margin-top:28px;font-size:16px;color:var(--soft);max-width:60ch}
 .need strong{color:var(--ink)}
@@ -377,14 +386,23 @@ footer nav{display:flex;gap:22px}
         <span class="tag quiet">After your catch-up</span>
         <h3>Keep-Up</h3>
         <p class="for">For keeping the books current, month to month.</p>
-        <div class="amount"><strong>A$350</strong><span>a month</span></div>
-        <p class="small">Optional ongoing service, with separate written terms.</p>
+        <div class="amount"><span class="from">from</span><strong>A$250</strong><span>a month</span></div>
+        <p class="small">Optional ongoing service, with separate written terms. No GST added.</p>
+        <table class="tiers">
+          <caption class="sr">Keep-Up monthly tiers</caption>
+          <thead><tr><th scope="col">Tier</th><th scope="col">Transactions a month</th><th scope="col">Price</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">Starter</th><td>Up to 50</td><td>A$250</td></tr>
+            <tr><th scope="row">Standard</th><td>Up to 100</td><td>A$300</td></tr>
+          </tbody>
+        </table>
         <ul>
-          <li><svg width="18" height="18" viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10.5l4 4L16 6" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Monthly reconciliation for up to 2 accounts and 100 transactions</span></li>
+          <li><svg width="18" height="18" viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10.5l4 4L16 6" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Monthly reconciliation of up to 2 bank or card accounts</span></li>
           <li><svg width="18" height="18" viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10.5l4 4L16 6" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg><span>An updated open items list</span></li>
           <li><svg width="18" height="18" viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10.5l4 4L16 6" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg><span>A monthly summary for your accountant</span></li>
         </ul>
-        <a class="textlink" href="#contact">Ask about Keep-Up</a>
+        <p class="small">More than 100 transactions a month? I look at your records and quote first.</p>
+        <a class="textlink" href="#contact" style="margin-top:14px;display:inline-block">Ask about Keep-Up</a>
       </div>
     </div>
     <p class="need"><strong>Before we start:</strong> you need a registered BAS or tax agent who can give or confirm your account and tax-rate coding in writing. I organise and reconcile; your agent makes the tax decisions.</p>
